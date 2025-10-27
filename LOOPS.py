@@ -1,50 +1,87 @@
-######## Implementation of if-else block ####### 
-
-print("CHECKING WHETHER THE GIVEN INTEGER IS ODD OR EVEN") 
-print("=================================================") 
-n=int(input("Enter an integer : ")) 
-if n%2==0: 
-  print(n,"  is even") 
-else: 
-  print(n,"  is odd") 
-
-############## Implementation of nested-if ######
-
-  print("FINDING THE GREATEST AMONG THREE VARIABLES") 
-print("==========================================") 
-a=int(input("enter a : ")) 
-b=int(input("enter b : ")) 
-c=int(input("enter c : ")) 
-if (a>b): 
-  if (a>c): 
-     print("a is big") 
-  else: 
-     print("c is big") 
-else: 
-   if (b>c): 
-     print("b is big") 
-   else: 
-     print("c is big")
-
-
-############## Implementation of if-elif-else  ######### 
+########## Implementation of while-loop ####### 
  
-print("FINDING THE CORRESPONDING DAY OF THE GIVEN INTEGER") 
-print("==================================================") 
-day=int(input("Enter an integer 1-7 : ")) 
-if (day==1): 
-   print(day," - SUNDAY") 
-elif (day==2): 
-   print(day," - MONDAY") 
-elif (day==3): 
-   print(day," - TUESDAY") 
-elif (day==4): 
-   print(day," - WEDNESDAY") 
-elif (day==5): 
-   print(day," - THURSDAY") 
-elif (day==6): 
-   print(day," - FRIDAY") 
-elif (day==7): 
-   print(day," - SATURDAY") 
+print("ACCESSING LIST ELEMENTS USING WHILE-LOOP") 
+print("========================================") 
+list1=[12,'JAMES',60,70,'PASS'] 
+i=1 
+while i<len(list1): 
+  print(list1[i],end="  ") 
+  i+=1 
+print() 
+ 
+########## Implementation of entry-level while-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING ENTRY-LEVEL WHILE-LOOP") 
+print("====================================================") 
+i=1 
+while True: 
+  if i>=len(list1): 
+     break 
+  print(list1[i],end="  ") 
+  i+=1 
+print() 
+ 
+########## Implementation of middle-level while-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING MIDDLE-LEVEL WHILE-LOOP") 
+print("=====================================================") 
+i=0 
+while True: 
+  i+=1 
+  if i>=len(list1): 
+     break  
+  print(list1[i],end="  ") 
+print() 
+ 
+########## Implementation of exit-level while-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING EXIT-LEVEL WHILE-LOOP") 
+print("===================================================") 
+i=1 
+while True: 
+  print(list1[i],end="  ") 
+  i+=1 
+  if i>=len(list1): 
+     break  
+print() 
+ 
+ 
+ 
+ 
+########## Implementation of while-else-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING WHILE-ELSE-LOOP") 
+print("==============================================") 
+i=1 
+while i<len(list1): 
+  print(list1[i],end="  ") 
+  i+=1 
 else: 
-   print("Wrong input, please enter an integer in the range 1-7")
+  print("The loop is ended") 
+print() 
+ 
+########## Implementation of for-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING FOR-LOOP") 
+print("=======================================") 
+for i in range(1,len(list1)): 
+  print(list1[i],end="  ") 
+print() 
+ 
+########## Implementation of for-else-loop ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING FOR-ELSE-LOOP") 
+print("===========================================") 
+for i in range(1,len(list1)): 
+  print(list1[i],end="  ") 
+else: 
+  print("The loop is ended") 
+print() 
+ 
+########## Implementation of for-loop (for each) ####### 
+ 
+print("ACCESSING LIST ELEMENTS USING FOR-LOOP (FOR EACH)") 
+print("==================================================") 
+for item in list1: 
+  print(item,end="  ") 
+print() 
