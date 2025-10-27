@@ -1,49 +1,35 @@
-#### Creating the class student  #### 
-class student: 
-    def get_student_data(self): 
-        self.rollno=int(input("enter rollno")) 
-        self.name=input("enter name") 
-        self.clsname=input("enter class studying")  
- 
-    def display_student_data(self): 
-        print("RollNo       : ",self.rollno) 
-        print("StudentName  : ",self.name) 
-        print("Class        : ",self.clsname)  
- 
- 
- 
-#### Creating a class mark1 by inheriting the class student #### 
- 
-class marks(student): 
-     def get_marks_data(self): 
-         self.get_student_data() 
-         self.mark1=int(input("enter mark1"))  
-         self.mark2=int(input("enter mark2"))  
-         if self.mark1>49 and self.mark2>49: 
-              self.result="pass" 
-         else: 
-              self.result="fail"  
-     def display_marks_data(self): 
-        self.display_student_data() 
-        print("Mark1      : ",self.mark1) 
-        print("Mark2      : ",self.mark2) 
-        print("Result     : ",self.result)  
- 
-###### Creating an object of class student ##### 
- 
-s1=student() 
-print("Enter the information of the object s1") 
-s1.get_student_data() 
-s1.display_student_data() 
- 
-##### Creating objects of class marks #### 
- 
-s2=marks() 
-print("Enter the information of the object s2") 
-s2.get_marks_data() 
-s2.display_marks_data() 
- 
-s3=marks() 
-print("Enter the information of the object s3") 
-s3.get_marks_data() 
-s3.display_marks_data() 
+def add1(x,y,z): 
+   return(x+y+z) 
+def add2(x,y,z): 
+   return(x+y+z) 
+def add3(x,y,z=30): 
+   return(x+y+z) 
+def add4(*x): 
+   sum=0 
+   for i in x: 
+     sum=sum+i 
+   return(sum) 
+def arithmetic(x,y): 
+  a=x+y 
+  b=x-y 
+  c=x*y 
+  d=x/y 
+  return(a,b,c,d) 
+print("Function") 
+print("=======") 
+print("Function with Required arguments") 
+print("=========================") 
+print("add1(100,200,300) : ",add1(100,200,300)) 
+print("Function with keyword arguments") 
+print("=========================") 
+print("add2(y=15,z=20,x=40) : ",add2(y=15,z=20,x=40)) 
+print("Function with default arguments") 
+print("=======================") 
+print("add3(y=150,x=200) : ",add3(y=150,x=200)) 
+print("Function with variable length arguments") 
+print("=============================") 
+print("add4(10,20,30) : ",add4(10,20,30)) 
+print("add4(10,20,30,40,50) : ",add4(10,20,30,40,50)) 
+print("Function returning multiple values") 
+print("=========================") 
+print("arithmetic(10,20) : ",arithmetic(10,20))
