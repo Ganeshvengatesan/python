@@ -1,39 +1,38 @@
-print("File Handling") 
-print("==========\n") 
+######### Compile time polymorphism #### 
+class Addition: 
+    def add(self, a, b): 
+        return a + b         
  
-"""Writing a file""" 
-print("Writing a file") 
-print("---------------") 
-file1=open("student.txt",'w') 
-file1.write("101 James 60 70 pass\n") 
-file1.write("102 John 65 66 pass\n") 
-print("Name of the file : ",file1.name) 
-print("Opening mode : ",file1.mode) 
-print("File closed : ",file1.closed) 
-print("\n *****  Two students information are written in to the file  *****\n") 
-file1.close() 
+print("Compile time polymorphism") 
+print("====================") 
+# Create object 
+t1 = Addition() 
+# Using integer arguments 
+print(t1.add(4,5)) 
+# Using string arguments 
+print(t1.add("computer ","science"))  
+# Using list arguments  
+print(t1.add([12,'Williams'],[60,70,'pass']))       
  
-"""Reading a file""" 
-print("Reading a file") 
-print("----------------") 
-file1=open("student.txt",'r') 
-print("Name of the file : ",file1.name) 
-print("Opening mode : ",file1.mode) 
-print("File closed : ",file1.closed) 
-print("student.txt : \n",file1.read()) 
-file1.close() 
+######### Run time polymorphism #### 
+class Fruit: 
+    def color(self): 
+        return "Fruits have generally some natural color" 
  
-print("*****  Two students information are read from the file  *****\n") 
-"""Opening a file in append mode""" 
-print("Opening a file in append mode") 
-print("-------------------------------------") 
-file1=open("student.txt",'a') 
-print("Name of the file : ",file1.name) 
-print("Opening mode : ",file1.mode) 
-print("File closed : ",file1.closed) 
-file1.write("103 Robert 40 70 fail\n") 
-file1.write("104 Williams 60 60 pass\n") 
-file1=open("student.txt",'r') 
-print("student.txt after writing in append mode : \n",file1.read()) 
-print("*****  Additionally two students information are written at the end of the file  *****\n") 
-file1.close() 
+class Apple(Fruit): 
+    def color(self): 
+        return "Apple is Red in color" 
+ 
+class Mango(Fruit): 
+    def color(self): 
+        return "Mango is Yellow in color" 
+class Watermelon(Fruit): 
+    def color(self): 
+        return "Watermelon is Green in color" 
+ 
+print("Run time polymorphism") 
+print("=================") 
+print(Apple().color()) 
+print(Mango().color()) 
+print(Watermelon().color()) 
+print(Fruit().color()) 
