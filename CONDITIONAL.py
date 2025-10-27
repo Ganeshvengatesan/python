@@ -1,35 +1,50 @@
-def add1(x,y,z): 
-   return(x+y+z) 
-def add2(x,y,z): 
-   return(x+y+z) 
-def add3(x,y,z=30): 
-   return(x+y+z) 
-def add4(*x): 
-   sum=0 
-   for i in x: 
-     sum=sum+i 
-   return(sum) 
-def arithmetic(x,y): 
-  a=x+y 
-  b=x-y 
-  c=x*y 
-  d=x/y 
-  return(a,b,c,d) 
-print("Function") 
-print("=======") 
-print("Function with Required arguments") 
-print("=========================") 
-print("add1(100,200,300) : ",add1(100,200,300)) 
-print("Function with keyword arguments") 
-print("=========================") 
-print("add2(y=15,z=20,x=40) : ",add2(y=15,z=20,x=40)) 
-print("Function with default arguments") 
-print("=======================") 
-print("add3(y=150,x=200) : ",add3(y=150,x=200)) 
-print("Function with variable length arguments") 
-print("=============================") 
-print("add4(10,20,30) : ",add4(10,20,30)) 
-print("add4(10,20,30,40,50) : ",add4(10,20,30,40,50)) 
-print("Function returning multiple values") 
-print("=========================") 
-print("arithmetic(10,20) : ",arithmetic(10,20))
+########## Implementation of if-else block ####### 
+ 
+print("CHECKING WHETHER THE GIVEN INTEGER IS ODD OR EVEN") 
+print("=================================================") 
+n=int(input("Enter an integer : ")) 
+if n%2==0: 
+  print(n,"  is even") 
+else: 
+  print(n,"  is odd") 
+ 
+############### Implementation of nested-if ###### 
+ 
+print("FINDING THE GREATEST AMONG THREE VARIABLES") 
+print("==========================================") 
+a=int(input("enter a : ")) 
+b=int(input("enter b : ")) 
+c=int(input("enter c : ")) 
+if (a>b): 
+  if (a>c): 
+     print("a is big") 
+  else: 
+     print("c is big") 
+else: 
+   if (b>c): 
+     print("b is big") 
+   else: 
+     print("c is big") 
+ 
+ 
+############## Implementation of if-elif-else  ######### 
+ 
+print("FINDING THE CORRESPONDING DAY OF THE GIVEN INTEGER") 
+print("==================================================") 
+day=int(input("Enter an integer 1-7 : ")) 
+if (day==1): 
+   print(day," - SUNDAY") 
+elif (day==2): 
+   print(day," - MONDAY") 
+elif (day==3): 
+   print(day," - TUESDAY") 
+elif (day==4): 
+   print(day," - WEDNESDAY") 
+elif (day==5): 
+   print(day," - THURSDAY") 
+elif (day==6): 
+   print(day," - FRIDAY") 
+elif (day==7): 
+   print(day," - SATURDAY") 
+else: 
+   print("Wrong input, please enter an integer in the range 1-7") 
